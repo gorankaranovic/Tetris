@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Anton', sans-serif;
+}
+
+body {
+    text-align: center;
+    background-image: url(images/tetris.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    position: relative;
+    height: 100vh;
+    /* background-color: black; */
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+#t {
+    color: yellow;
+}
+#e {
+    color: #f202ea;
+}
+#r {
+    color: #02f236;
+}
+#i {
+    color: #05f1f5;
+}
+#s {
+    color: yellow;
+}
+
+.btn, .pause, .playAgain {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    padding: 5px 20px;
+    border-radius: 7px;
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid #fff;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn:hover, .playAgain:hover, .pause:hover {
+    color: yellow;
+    border: 2px solid yellow;
+    scale: 1.05;
+}
+
+.playAgain, .pause {
+    display: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+
+}
+
+.grid {
+    width: 230px;
+    height: 410px;
+    background: linear-gradient(rgb(23, 87, 23), black);
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    border: 5px solid yellow;
+}
+
+
+
+.grid div {
+    width: 20px;
+    height: 20px;
+    border: 1px transparent;
+}
+
+.side-grid {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mini-grid {
+    width: 84px;
+    height: 84px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid yellow;
+
+}
+
+.mini-grid div {
+    width: 20px;
+    height: 20px;
+    /* border: 1px solid #fff; */
+}
+
+.tetromino {
+    background-color: yellow;
+}
+
+.score {
+    margin-top: 30px;
+    position: relative;
+}
+
+#score {
+    font-size: 2rem;
+}
+
+.gameOver {
+    position: absolute;
+    font-size: 2rem;
+    bottom: -150px;
+    display: none;
+    color: red;
+}
+
+.androidControlsBtn {
+    margin: 30px;
+    padding: 20px 40px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid rgb(30, 20, 69);
+    border-radius: 4px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+}
+
+#pressHere {
+    color: red;
+    font-style: italic;
+}
+
+.androidControlsBtns {
+    display: none;
+}
+
+.androidControlsBtns button {
+    margin: 30px 5px 0 5px;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid rgb(30, 20, 69);
+    border-radius: 4px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+}
+
+.btnDown {
+    position: relative;
+}
+
+.androidControlsBtns button i {
+    position: absolute;
+    top: -20px;
+    right: -30px;
+}
+
+
+
+.controls {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0,0,0,.4);
+    padding: 5px;
+}
+
